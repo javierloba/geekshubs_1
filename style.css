@@ -1,0 +1,386 @@
+/* ===== Reset ===== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ===== General settings ===== */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,500,700');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: .7em;
+    line-height: 2.2em;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .whatsapp {
+        width: 7em;
+        position: fixed;
+        right: 1em;
+        bottom: 1em;
+        padding: .5em;
+    }
+}
+
+/* ===== Text Styles ===== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 4.5em;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.8em;
+}
+
+h3 {
+    font-size: 3.5em;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin: .8em 0;
+}
+
+h3::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+}
+
+h4 {
+    font-size: 3em;
+    letter-spacing: 0.4px;
+    line-height: 1em;
+    margin: 10px 0;
+}
+
+h5 {
+    color: white;
+    font-size: 1.8em;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+
+/* ===== Home ===== */
+
+/* ===== Nav ===== */
+
+.nav-bar {
+    background-color: #00188F;
+    padding: 1.2em 3%;
+}
+
+@media (min-width: 768px) {
+    .nav-bar {
+        padding: 1em 15%;
+    }
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.nav-bar a:hover {
+    color: #B0B7DA;
+}
+
+.nav-bar ul {    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-bar-ul li {
+    margin: 0 auto;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* ===== Header ===== */
+
+.header {
+    height: 100%;
+    min-height: 600px;
+    background-image: url(img/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 0;
+    padding-top: 5.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .header {
+        min-height: 900px;
+        padding-top: 7em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding-top: 10em;
+    }
+}
+
+.header img {
+    width: 18em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.header h2 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: .7em 0;
+    text-shadow: #020819 2px 2px 9px;
+}
+
+@media (min-width: 768px) {
+    .header h2 {
+        margin: 1.7em 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        margin: 3em 4em 0 4em;
+    }
+}
+
+.header .orange {
+    color: #FFA305;
+    font-size: 1.7em;
+    text-shadow: #020819 4px 2px 7px;
+}
+
+/* ===== Section ===== */
+
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: .5em;
+    }
+}
+
+.service-box {
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0 #eee;
+    margin: 30px 5%;
+    padding: 20px;
+}
+
+.service-box img {
+    width: 50%;
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .service-box p {
+        margin-top: 1.2em;
+        font-size: 1.5em;
+        line-height: 2.3em;
+    }
+}
+
+/* ===== Footer ===== */
+
+.footer {
+    background-color: #00188F;
+    text-align: center;
+    padding: 3.2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer a{
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #B0B7DA;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+/* ===== Páginas ===== */
+
+/* ===== Perfil ===== */
+
+.header-profile {
+    padding-top: 1.5em;
+    min-height: 45em;
+}
+
+.profile-card {
+    text-align: center;
+    border: 2px solid #B0B7DA;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0 #B0B7DA;
+    margin: 10px 5%;
+    padding: 20px;
+    background-color: rgba(230, 243, 245, 0.438);
+}
+
+@media (min-width: 1024px) {
+    .profile-card {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        column-gap: .5em;
+        padding: 6em;
+        margin-top: 3em;
+    }
+}
+
+.profile-card img {
+    border-radius: 20px;
+}
+
+.header .profile-img {
+    margin-bottom: 0em;
+}
+
+.header .bio {
+    background-color: rgba(255, 255, 255, 0.685);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 5%;
+}
+
+/* ===== Contacto ===== */
+
+.map-frame {
+    height: 40em;
+    width: 100%;
+}
+
+.contact {
+    border: 2px solid #B0B7DA;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0 #B0B7DA;
+    margin: 2em 5%;
+    padding: 3em;
+}
+
+.address {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    margin: 2em auto;
+}
+
+.slot-form-container {
+    width: 50%;
+    margin: 18px auto 0px auto;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+  
+.slot-form-container button {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    padding: 9px;
+    margin: 15px 0;
+}
+
+@media (min-width: 1024px) {
+    .contact-1024 {
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .address-box {
+        margin-left: 10em;
+    }
+}
